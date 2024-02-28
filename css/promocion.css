@@ -1,0 +1,53 @@
+/********************/
+#promociones{
+    background-color: #f5f5f5;
+}
+.e{
+    border: 1px solid;
+    margin: 10px;
+    width: 240px;
+    height: 450px;
+
+    overflow: hidden;
+}
+ .e:hover{
+    box-shadow: 1px 1px 10px 11px rgba(0,0,0,0.1);
+-webkit-box-shadow: 1px 1px 10px 11px rgba(0,0,0,0.1);
+-moz-box-shadow: 1px 1px 10px 11px rgba(0,0,0,0.1);
+   /* cursor: pointer;*/
+ }
+.euno{
+    width: 180px;
+}
+.contenedor-flex{
+    
+    align-items: stretch;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+/****/
+.e a{
+    text-decoration: none;
+}
+.img_promo{
+    overflow:hidden;
+}
+.img_promo img{
+    height: 450px;
+    max-height: 450px;
+    width: 100%;
+    object-fit:fill ;
+    /*justify-content: center;*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+
+.title_promo{
+    bottom: 0;
+    text-align: center;
+}

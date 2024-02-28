@@ -1,0 +1,438 @@
+.aa{
+    width: 100%;
+    overflow: hidden;
+}
+
+@media(width < 600px){
+    .aa{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .a1{
+        display: flex;
+        width: 100% !important;
+    }
+    .a2{
+        width: 100% !important;
+    }
+}
+.a1{
+    background-color:blue;
+    float: left;
+    position: relative;
+    height:600px;
+    width: 50%;
+}
+.a2{
+    float: right;
+    position: relative;
+    height: 600px;
+    width: 50%;
+    /*background-color: red; para diferenciar*/
+    display: flex;
+    justify-content: center;
+}
+
+.b{
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+}
+.c{
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+}
+
+/***form****/
+form {
+    width: 80%;
+    margin-left: 10px;
+}
+form h2{
+    margin-bottom: 20px;
+}
+form h3{
+    margin-top: 15px;
+}
+/**los input button**/
+/**color**/
+.select_color{
+    display: flex;
+    margin-top: 10px;
+}
+.color_boton{
+    border-radius: 50%;
+    /*padding: 20px;*/
+    width: 38px;
+    height: 38px;
+    margin: 4px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+.color_boton div{
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+}
+
+.color_boton:hover{
+    background-color: rgb(29, 28, 28);
+}
+
+.color_select .color_boton{
+    background-color: rgb(51, 50, 50);
+
+}
+.color_select .color_boton div{
+    border:3px white solid;
+}
+.color_boton div:hover{
+    border:3px white solid;
+
+}
+/**talle**/
+.select_talle{
+    display: flex;
+    margin-top: 10px;
+}
+.talle_boton{
+    margin: 4px;
+    width: 40px;
+    height: 35px;
+    font-weight: 700;
+    border: 3px solid;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(68, 67, 67);
+    cursor: pointer;
+}
+
+.talle_select{
+    color: black;
+}
+    .talle_boton:hover{
+        color: black;
+    }
+
+/**cantidad**/
+.select-container{
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-width: 25px;
+    width: 145px;
+    height: 50px;
+    margin-top: 10px;
+}
+.select-box{
+    border: 2px solid rgb(136, 134, 134);
+    border-radius: 5px;
+    appearance: none;
+    padding: 0 50px 0 0;
+    width: 100%;
+    color: black;
+    /*background-color: #2873ff;*/
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.select-container .icon-container{
+    border-radius: 5px;
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    background-color: rgb(136, 134, 134);
+}
+
+.icon-container i{
+    font-size: 30px;
+    color: black;
+}
+/******precio estomado*********/
+.precioCantidad{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/****boton_comprar*****/
+
+.boton_comprar, .boton_cancelar{
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10 4;/*6 1*/    
+    transition: 0.3s;
+}
+.boton_comprar:hover{
+    background-color: rgb(41, 230, 41);
+}
+.boton_cancelar:hover{
+    background-color: rgb(230, 41, 41);
+}
+
+/*************************formularioCompleto***************************/
+#formularioCompleto{
+    width: 100%;
+    height: auto;
+}
+
+.tarjeta{
+    display: flex;
+    flex-wrap: wrap;
+}
+.confirmacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px;
+}
+@media(width < 600px){
+    .divForm{
+        width: 100%;
+    }
+}
+
+.oculto{
+    display: none;
+}
+.divAbajo{
+    z-index: 1;
+    display: none;
+}
+.divArriba{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+}
+/*******imagenes**********/
+.container{
+    position:relative;
+    width: 100%;
+    height: 600px;
+    /*margin: 50px;padding*/
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+#slide{
+    width: max-content;
+    margin-top: 50px;
+}
+.item{
+    width: 100px;
+    height: 100px;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    transform: translate(0,-50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+}
+.item:nth-child(1){
+    left: 0;
+    top: 10px;
+    transform: translate(0,0);
+    border-radius: 0;
+    width:100%;
+    height: 400px;
+    box-shadow: none;
+    /*aca la imagen debe quedar completa arreglar*/
+    display: flex;
+    flex-wrap: wrap;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.item:nth-child(2){
+    left: 20%;
+}
+.item:nth-child(3){
+    left: calc(20% + 110px);
+}
+.item:nth-child(n+4){
+    left: calc(20% + 220px);
+}
+
+
+.buttons{
+    position:relative ;/*absolute*/
+    bottom: 30px;
+    z-index: 222222;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    transition: 0.5s;
+}
+    #prev{
+        position:absolute;
+        left: 5px;
+        top: 25%;
+    }
+    #next{
+        position: absolute;
+        right: 5px;
+        top: 25%;
+    }
+.buttons button:hover{
+    background-color: #272720;
+    i{
+        color: white;
+    }
+}
+
+
+/**********************descripcion*********************************/
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: #f5f5f5;
+}
+.b .description1 h3{
+    font-size: 25px;
+    font-weight: 700;
+    padding: 20px 0 20px 20px;
+}
+.b .description2{
+    width: 80%;
+    height: auto;
+    display: flex;
+}
+/**********************sugerencias*********************************/
+.c .sugerencias h3{
+    font-size: 25px;
+    font-weight: 700;
+    padding: 20px 0 20px 20px;
+}
+
+.sugerencias{
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+.sugerencias_carrousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+}
+.sugerencias_carrouselP{
+    position: relative;
+    height: 450px;
+    width: 1075px;
+    display: flex;
+    align-items: center;
+}
+
+.swiper{
+    width: 950px;
+    height: 400px;
+}
+
+section .card .image{
+    height: 240px;
+    width: 100%;
+    padding: 3px;
+    background-color: black;/**/
+}
+
+section .card .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+.card{
+    position: relative;
+    background: grey;
+    border-radius: 20px;
+    width: 280px;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    height: 55%;
+    width: 100%;
+    background: #b4b2b2;
+    /*border-radius: 20px 20px 0 0;*/
+}
+.card .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 2px 20px 2px;
+    position: relative;
+    z-index: 100;
+}
+
+.card .name-profession{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.name-profession .name{
+    font-size: 20px;
+    font-weight: 500;
+}
+.name-profession .profession{
+    color: white;
+    transition: 0.3s;
+}
+.name-profession .profession:hover{
+    color: blue;
+}
+.swiper-button-next, .swiper-button-prev{
+    opacity: 0.7;
+    color: #7d2ae8;
+    transition: all 0.3s ease;
+}
+.swiper-button-next:hover , .swiper-button-prev:hover{
+    opacity: 1;
+    color: rgb(9, 241, 241);
+}
+
+.swiper-slide{
+    height: 90% !important;
+}
+
+@media(width < 630px){
+    .swiper {
+        width: 250px;
+    }
+}
+@media(630px <= width <= 950px){
+    .swiper{
+        width: 600px;
+    }
+}

@@ -1,0 +1,138 @@
+/*****principal********/
+#productos{
+    background-color: #f5f5f5;
+}
+.c{
+    border: 1px solid;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+.wrapper{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:10px;
+    grid-auto-rows: minmax(90px,120px);
+}
+    .uno{
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+    .dos{
+        grid-column: 2;
+        grid-row: 1/5;
+    }
+    .tres{
+        grid-column: 3/4;
+        grid-row: 1/4;
+    }
+    .cuatro{
+        grid-column: 1;
+        grid-row: 4/7;
+    }
+    .cinco{
+        grid-column: 2;
+        grid-row: 5/7;
+    }
+    .seis{
+        grid-column: 3/4;
+        grid-row: 4/7;
+    }
+
+/*********************/
+    @media (max-width:850px){
+        .wrapper{
+            grid-template-columns: repeat(2,1fr);
+        }
+        .uno{
+            grid-column: 1;
+            grid-row: 1/4;
+        }
+        .dos{
+            grid-column: 2;
+            grid-row: 1/4;
+        }
+        .tres{
+            grid-column: 1;
+            grid-row: 4/8;
+        }
+        .cuatro{
+            grid-column: 2;
+            grid-row: 4/8;
+        }
+        .cinco{
+            grid-column: 2;
+            grid-row: 8/12;
+        }
+        .seis{
+            grid-column: 1;
+            grid-row: 8/12;
+        }
+    }
+/******/
+.c a{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    transition: 0.8s;
+}
+
+    .c a:hover{
+        .tittle_prod{
+            background-color: rgba(226, 221, 221, 0.411);
+        }
+    }
+
+.wr_img{
+    overflow:hidden;
+    width: 100%;
+    height: 100%;    
+}
+.wr_img img{
+    width: 100%;
+    height: 100%;
+    /*max-height: 450px;*/
+    background-position: center center;
+    background-attachment: cover;
+
+}
+@supports(object-fit: cover){
+    .wr_img img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+a .tittle_prod{
+    white-space: nowrap;
+  overflow: hidden;
+}
+
+.tittle_prod{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    
+    display: flex;
+    text-overflow: ellipsis;
+
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    background-color: rgba(128, 128, 128, 0.288);
+}
+
+     @media (max-width: 850px) {
+        .tittle_prod{
+            font-size: 25px;
+            display: block;
+            padding: 10px 5px 0;
+        }
+     }

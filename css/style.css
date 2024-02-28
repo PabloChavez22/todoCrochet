@@ -1,0 +1,142 @@
+
+/********fonts*************/
+body, section, a, p, div, span, h1, h2, h3, h4, h5{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/**************************/
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+section{
+    border: 1px solid grey;
+    margin-top: 5px;
+}
+
+/***aca el footer***/
+footer{
+    margin-top: 5px;
+    padding-top: 10px;
+    background-color: rgb(105, 104, 104);
+    text-align: center;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.inicio_footer a{
+    text-decoration: none;
+    color: black;
+}
+.inicio_footer a:hover{
+    color: rgba(4, 47, 66, 0.712);
+}
+.copyr{
+    background-color: grey;
+    width: 100%;
+    padding: 2px;
+}
+.footer_up{
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 5px;
+}
+
+.menu_footer{
+    width: 100px;
+    display: inline-grid;
+    justify-content: space-around;
+}
+    .menu_footer a{
+        padding: .5rem;
+        border: none;
+        display:inline-flex;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+    }
+    .menu_footer a:hover{
+        background-color: rgba(4, 47, 66, 0.712);
+        border-color: none;
+    }
+.redes_sociales{
+    width: 40px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.redes_sociales:hover{
+    box-shadow: 0 5px 5px #3f3f3f;
+    cursor: pointer;
+}
+@media(width < 600px){
+    .footer_up{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/***aca el header***/
+header{
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid white;
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+header h2{
+    text-align: center;
+    color: white;
+ }
+ nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+    nav a{
+        padding: .5rem;
+        border: 1px solid white;
+        border-radius: 5px;
+        display:inline-flex;
+        text-decoration: none;
+        color: white;
+    }
+    header nav a:hover{
+        background-color: rgba(5, 58, 82, 0.712);
+        border-color: rgba(5, 58, 82, 0.712);
+        color:rgb(9, 241, 241);
+    } 
+
+/*********************/
+@media(width < 600px){
+    header, header nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav a{
+        margin-top: 5px;
+        font-size: 20px;
+        font-weight: 800;
+    }
+    header h2{
+        font-size: 30px;
+    }
+}
+
+/*********************/
+section h2{
+    margin: 10px;
+}
+/*********************/

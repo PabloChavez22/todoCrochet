@@ -1,0 +1,96 @@
+.slide_img{
+    border: 1px solid;
+    border-radius: 10px;
+    width: 240px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+
+    transition: 0.5s;
+}
+
+    @media(max-width:850px){
+        slide_img{
+            width: 300px;/* no quedan*/
+            height: 800px;
+        }
+    }
+
+.slide_img:hover{
+    box-shadow: 1px 1px 10px 11px rgba(0,0,0,0.1);
+-webkit-box-shadow: 1px 1px 10px 11px rgba(0,0,0,0.1);
+-moz-box-shadow: 1px 1px 10px 11px rgba(0,0,0,0.1);
+}
+    .slide_img  img{
+        
+        height:100%;
+        width: 100%;
+        
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        overflow: hidden;
+        object-fit: fill;
+
+        transition: 0.5s;
+    }
+        .slide_img img:hover{
+            transform: scale(1.1);
+        }
+            
+    .centrado{
+        
+        transform: translate(0, -100%);
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+        background: rgb(44,81,153);
+        background: linear-gradient(0deg, rgba(44,81,153,0.9444152661064426) 57%, rgba(245,243,240,0) 97%);
+
+        text-align: center;
+    }
+        
+        .centrado p{
+            color: black;
+            font-size: 25px;
+        }
+        .centrado a{
+            color: blue;
+            font-size: 18px;
+            text-decoration: none;
+        }
+            .centrado a:hover{
+                text-decoration: underline overline blue;
+                
+            }
+
+.algosospechoso{
+    padding-left: 18px;
+    padding-right: 18px;
+    /*los bordes del carousel*/
+}
+.fondo{
+    background-color: grey;
+    padding: 10px;
+}
+
+/************************************/
+/*asi queda responsive*/
+.swiffy-slider ul{
+    grid-auto-columns: max-content;
+}
+
+.swiffy-slider ul li{
+    height: 520px;/*no es el li solamente*/
+}
+/*
+    @media (max-width:850px){
+
+       .algosospechoso{
+        width: 100%;
+        display: flex;
+        grid-auto-columns:max-content;
+
+       }
+    }
+*/

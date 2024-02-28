@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1", minimum-scale="1",maximum-scale="1">
+        <title>Todo Crochet</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/compra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    </head>
+    <body>
+        <header>
+            <h2>Todo crochet</h2>
+            
+            <nav>
+                    <a href="#"><i class=""></i>Productos</a>
+                    <a href="#"><i class=""></i>Tendencia</a>
+                    <a href="#"><i class=""></i>Promociones</a>
+                    <a href="#"><i class=""></i>Pagina Principal</a>
+            </nav>
+        </header>
+        <main>
+            <section class="aa">
+                <div class="a1">
+                    <div class="container">
+                        <div id="slide">
+                            <div class="item" style="background-image: url(../media/productos/sueterDokotoo-verde.jpg);">
+                            </div>
+                            <div class="item" style="background-image: url(../media/productos/sueterDokotoo2-negro.jpg);">
+                            </div>
+                            <div class="item" style="background-image: url(../media/productos/sueterDokotoo3-azul.jpg);">
+                            </div>
+                            <div class="item" style="background-image: url(../media/productos/sueterDokotoo4-rosal.jpg);">
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+                            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="a2">
+                    <form action="" id="formularioProducto" class="">
+                        <h2 id="producto">Sueter Dokotoo - manga 3/4</h2>
+                        <h3>Precio: $ <span id="precioProducto">29899</span></h3>
+                       
+                        <div><!--eleccion-colores-->
+                            <h3>Color</h3>
+                            <div class="select_color">
+                                <span class="color color_select" data-value="blue" title="Azúl">
+                                    <div class="color_boton"><div></div></div>
+                                </span>
+                                <span class="color" data-value="green">
+                                    <div class="color_boton"><div style="background-color:green;" title="Verde"></div></div>
+                                </span>
+                                <span class="color" data-value="pink">
+                                    <div class="color_boton"><div style="background-color:pink;" title="Rosa"></div></div>
+                                </span>
+                                <span class="color" data-value="black">
+                                    <div class="color_boton"><div style="background-color:black;" title="Negro"></div></div>
+                                </span>
+                            </div>
+                        </div>
+                        <div><!--eleccion-talles-->
+                            <label for="talleD"><h3>Talle</h3></label>
+                            <div class="select_talle">
+                                <span class="talle_boton talle_select" data-valu='m'>M</span>
+                                <span class="talle_boton" data-valu="l">L</span>
+                                <span class="talle_boton" data-valu="xl">XL</span>
+                            </div>
+                        </div>
+                        <div><!--eleccion-cantidad-->
+                            <label for="cantidadD"><h3>Cantidad</h3></label>
+                            <div class="select-container">
+                                <select class="select-box" name="cantidadD" id="cantidadD" onchange="ShowSelected()" required>
+                                    <option value="">Cantidad</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <div class="icon-container">
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="precioCantidad">
+                            <h3>Precio estimado: $ <span id="totalEstimado"></span></h3>
+                        </div>
+                        <button type="submit" class="boton_comprar" id="datoProducto">Comprar</button>
+                    </form>
+
+                    <div id="datosPersonales" class="divForm oculto">
+                        <form id="formularioCompleto" action="">
+                            <h2>Confirmar compra</h2>
+                            <p id="elegiste"></p>
+                            <div class="tarjeta">
+                                <label for="">Pagar con:</label>
+                                <select class="" name="t_targeta" id="t_targeta" required>
+                                    <option value="">tipo de tarjeta</option>
+                                    <option value="mercado_pago">mercado pago</option>
+                                    <option value="Naranja">Naranja</option>
+                                    <option value="Visa">Visa</option>
+                                    <option value="Cabal">Cabal</option>
+                                    <option value="Mastercard">Mastercard</option>
+                                </select>&nbsp;&nbsp;&nbsp;
+                                <label for="nroTarjeta">Ingrese números:</label>
+                                <input id="nroTarjeta" type="password" title="Ingrese ultimos 3 numeros." size="4" maxlength="3" required>
+                            </div><br>
+                            <label for="name">Nombre:</label>
+                            <input id="name" type="text" size="30" required placeholder="Nombre" title="Ingrese Nombre"><br><br>
+    
+                            <label for="surname">Apellido:</label>
+                            <input id="surname" type="text" size="30" required placeholder="Apellido" title="Ingrese Apellido"><br><br>
+    
+                            <label for="emailAddress">Email:</label>
+                            <input id="emailAddress" type="email" size="30" required placeholder="username@example.com" title="Proporcione una dirección de correo electrónico"><br><br>
+                            <div class="confirmacion">
+                                <button type="submit" class="boton_comprar" id="posta">Comprar</button>&nbsp;&nbsp;
+                                <button type="reset" class="boton_cancelar" id="borrar">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="b">
+                <div >
+                    <div class="description">
+                        <div class="description1">
+                            <h3>Descripción del producto</h3>
+                        </div>
+                        <div class="description2">
+                            <p>Tipo de tejido &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 100% acrílico<br>
+                                Instrucciones de cuidado del material&emsp;&emsp;Lavar a máquina<br><br>
+                                Característica: suéter de punto para mujer/manga corta 3/4 para mujer/tops de ganchillo/suéteres ligeros para mujer/tops de hombros descubiertos, cuello redondo/manga corta/color liso/ajuste holgado/casual, estilo vintage y lindo para primavera, otoño, invierno.
+                                <br><br>
+                                Adecuado para vacaciones, fiestas, trabajo, playa, calle, deporte, entrenamiento, ocasiones en verano, primavera, otoño e invierno.
+                                <br><br>
+                                Dokotoo Suéteres de primavera para mujer 2024, parte superior de punto, suéteres de manga corta 3/4, trajes ligeros, ropa sexy de cuello redondo, tops de ganchillo.
+                                <br><br>
+                                Se recomienda lavar con agua fría, no usar blanqueador, colgar o secar al aire, lavar con colores similares, lo que aumentará la durabilidad de tu ropa.<br></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="c">
+                <div class="sugerencias">
+                    <h3>Te puede interesar</h3>
+                    <div class="swiper mySwiper sugerencias_carrousel"><!--swiper mySwiper-->
+                        <div class="swiper-wrapper content"><!--swiper-wrapper-->
+
+                            <div class="swiper-slide card"><!--swiper-slide-->
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="../media/productos/poncho2-canela.jpg" alt="">
+                                    </div>
+
+                                    <div class="name-profession">
+                                        <span class="name">Poncho pequeño</span>
+                                        <a class="profession" href="#">Ver mas...</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide card"><!--swiper-slide-->
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="../media/productos/gorro4-violeta.jpg" alt="">
+                                    </div>
+
+                                    <div class="name-profession">
+                                        <span class="name">Gorro + Cuello</span>
+                                        <a class="profession" href="#">Ver mas...</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide card"><!--swiper-slide-->
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="../media/productos/pilusoValencia1-blanco.jpg" alt="">
+                                    </div>
+
+                                    <div class="name-profession">
+                                        <span class="name">Piluso Valencia</span>
+                                        <a class="profession" href="#">Ver mas...</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide card"><!--swiper-slide-->
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="../media/productos/trajeBaño1-blanco.jpg" alt="">
+                                    </div>
+
+                                    <div class="name-profession">
+                                        <span class="name">Traje de baño</span>
+                                        <a class="profession" href="#">Ver mas...</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide card"><!--swiper-slide-->
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="../media/productos/manta-canela.jpg" alt="">
+                                    </div>
+
+                                    <div class="name-profession">
+                                        <span class="name">Manta canela + gorro</span>
+                                        <a class="profession" href="#">Ver mas...</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide card"><!--swiper-slide-->
+                                <div class="card-content">
+                                    <div class="image">
+                                        <img src="../media/productos/sweater-esmeralda.jpg" alt="">
+                                    </div>
+
+                                    <div class="name-profession">
+                                        <span class="name">Sweater Esmeralda</span>
+                                        <a class="profession" href="#">Ver mas...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer_up">
+                <div class="inicio_footer"><a href="#">Inicio</a></div>
+                <div class="pages_menu_footer">
+                    <nav class="menu_footer">
+                        <a href="#productos"><i class=""></i>Productos</a>
+                        <a href="#tendencia"><i class=""></i>Tendencia</a>
+                        <a href="#promociones"><i class=""></i>Promociones</a>
+                        <a href="#"><i class=""></i>Iniciar Sesion</a>
+                    </nav>
+                </div>
+                <div class="programador"><p>Programador<br>Paul</p> <img src="../media/picture_linkedin.jpg" alt="linkedin" class="redes_sociales"></div>
+            </div>            
+
+            <div class="copyr"><p>&#169copyright 2024</p></div>
+        </footer>
+        <script src="../javascript/compra.js"></script>
+        <!--jquery-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- Swiper JS -->
+       
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!--initialize swiper-->
+        <script>
+
+        console.log(window.innerWidth);
+        if(window.innerWidth < 619 || $(window).width() < 619){
+                console.log("menor a 500");
+                    var swiper = new Swiper(".mySwiper",{
+                            slidesPerView: 1,
+                            spaceBetween: 30,
+                            slidesPerGroup:1,
+                            loop: true,
+                            loopFillGroupWithBlank: true,
+                            pagination: {
+                                el:".swiper-pagination",
+                                clickable: true,
+                            },
+                            navigation:{
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                            },
+                        });
+            }else{
+                console.log("no es menor a 500");
+                if(window.innerWidth < 630 || $(window).width() < 630){
+                    console.log("menor a 700");
+                    var swiper = new Swiper(".mySwiper",{
+                                slidesPerView: 2,
+                                spaceBetween: 30,
+                                slidesPerGroup:2,
+                                loop: true,
+                                loopFillGroupWithBlank: true,
+                                pagination: {
+                                    el:".swiper-pagination",
+                                    clickable: true,
+                                },
+                                navigation:{
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
+                            });
+                }else{
+                    console.log("mayor a 700");
+                    var swiper = new Swiper(".mySwiper",{
+                                    slidesPerView: 3,
+                                    spaceBetween: 30,
+                                    slidesPerGroup:3,
+                                    loop: true,
+                                    loopFillGroupWithBlank: true,
+                                    pagination: {
+                                        el:".swiper-pagination",
+                                        clickable: true,
+                                    },
+                                    navigation:{
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                    },
+                                });
+                }
+            }    
+
+        $(window).resize(function(){
+            if($(window).width() < 622){
+                console.log("menor a 500");
+                    var swiper = new Swiper(".mySwiper",{
+                            slidesPerView: 1,
+                            spaceBetween: 30,
+                            slidesPerGroup:1,
+                            loop: true,
+                            loopFillGroupWithBlank: true,
+                            pagination: {
+                                el:".swiper-pagination",
+                                clickable: true,
+                            },
+                            navigation:{
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                            },
+                        });
+            }else{
+                console.log("no es menor a 500");
+                if($(window).width() < 630){
+                    console.log("menor a 700");
+                    var swiper = new Swiper(".mySwiper",{
+                                slidesPerView: 2,
+                                spaceBetween: 30,
+                                slidesPerGroup:2,
+                                loop: true,
+                                loopFillGroupWithBlank: true,
+                                pagination: {
+                                    el:".swiper-pagination",
+                                    clickable: true,
+                                },
+                                navigation:{
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
+                            });
+                }else{
+                    console.log("mayor a 700");
+                    var swiper = new Swiper(".mySwiper",{
+                                    slidesPerView: 3,
+                                    spaceBetween: 30,
+                                    slidesPerGroup:3,
+                                    loop: true,
+                                    loopFillGroupWithBlank: true,
+                                    pagination: {
+                                        el:".swiper-pagination",
+                                        clickable: true,
+                                    },
+                                    navigation:{
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                    },
+                                });
+                }
+            }
+        });
+        </script>
+    </body>
+</html>
